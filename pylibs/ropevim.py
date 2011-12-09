@@ -203,9 +203,13 @@ class VimUtils(ropemode.environment.Environment):
         if filename != self.filename() or force:
             if other:
                 vim.command('new')
-            vim.command('e %s' % filename)
+            vim.command('e %s' % self.escape_spaces(filename))
             if readonly:
                 vim.command('set nomodifiable')
+
+    def escape_spaces(self, filename):
+        parts = [word.rstrip(' ') for word in filename.split(' ')]
+        return '\\ '.join(parts)
 
     def create_progress(self, name):
         return VimProgress(name)
