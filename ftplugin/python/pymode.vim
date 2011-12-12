@@ -20,7 +20,7 @@ if !pymode#Default('g:pymode_options_indent', 1) || g:pymode_options_indent
     setlocal shiftround
     setlocal smartindent
     setlocal smarttab
-    setlocal expandtab
+    "setlocal expandtab
     setlocal autoindent
 endif
 
