@@ -126,7 +126,7 @@ if g:pymode_breakpoint
 endif
 
 " OPTION: g:pymode_utils_whitespaces -- bool. Remove unused whitespaces on save
-call pymode#Default("g:pymode_utils_whitespaces", 1)
+call pymode#Default("g:pymode_utils_whitespaces", 0)
 
 " Utils whitespaces
 if g:pymode_utils_whitespaces
